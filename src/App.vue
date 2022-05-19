@@ -1,15 +1,19 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <SpotiHeader />
+  </div>
 </template>
 
 <script>
+import SpotiHeader from "./components/SpotiHeader.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    SpotiHeader,
+  },
 };
 </script>
-
 <style lang="scss">
-#app {
-}
+@import "./style/commonStyle.scss";
+@import "./style/variables.scss";
 </style>
