@@ -36,6 +36,7 @@ export default {
   h2 {
     color: white;
     font-size: 1.6rem;
+    text-transform: uppercase;
   }
   p {
     margin-bottom: 0;
