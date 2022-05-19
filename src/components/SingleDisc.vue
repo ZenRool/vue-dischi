@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="d-flex justify-content-center">
     <div
       class="disc text-center py-3 px-1 d-flex flex-column align-items-center"
     >
@@ -24,6 +24,7 @@ export default {
 .disc {
   background-color: $brand-secondary-color;
   height: 350px;
+  width: 300px;
   &__img {
     width: 150px;
     height: 150px;
