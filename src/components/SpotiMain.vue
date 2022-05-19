@@ -1,23 +1,24 @@
 <template>
-  <main
-    class="main container-fluid d-flex align-items-center justify-content-center"
-  >
-    <div class="container"></div>
+  <main class="main container-fluid">
+    <div class="container d-flex align-items-center justify-content-center">
+      <ListDiscs />
+    </div>
   </main>
 </template>
 <script>
+import ListDiscs from "./ListDiscs.vue";
 export default {
   name: "SpotiMain",
+  components: {
+    ListDiscs,
+  },
 };
 </script>
 <style lang="scss" scoped>
 @import "../style/variables.scss";
 .main {
-  height: calc(100vh - 90px);
+  min-height: calc(100vh - 90px);
+  padding-top: 90px;
   background-color: $brand-primary-color;
-  .container {
-    background-color: red;
-    height: 100px;
-  }
 }
 </style>
