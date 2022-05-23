@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <SpotiHeader />
-    <SpotiMain />
+    <SpotiHeader @searchChange="searchChange($event)" />
+    <SpotiMain :SearchStr="this.search" />
   </div>
 </template>
 
@@ -13,6 +13,17 @@ export default {
   components: {
     SpotiHeader,
     SpotiMain,
+  },
+  data: function () {
+    return {
+      search: "All",
+    };
+  },
+  methods: {
+    searchChange(event) {
+      // console.log(typeof event);
+      this.search = event;
+    },
   },
 };
 </script>

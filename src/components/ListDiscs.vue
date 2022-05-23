@@ -3,7 +3,12 @@
     <LoaderDisc />
   </div>
   <div v-else class="row row row-cols-1 row-cols-md-2 row-cols-lg-5 g-5">
-    <SingleDisc v-for="(disc, index) in albums" :key="index" :DiscObj="disc" />
+    <SingleDisc
+      v-for="(disc, index) in albums"
+      :key="index"
+      :SearchStr="SearchStr"
+      :DiscObj="disc"
+    />
   </div>
 </template>
 <script>
@@ -21,6 +26,9 @@ export default {
       albums: [],
       loading: true,
     };
+  },
+  props: {
+    SearchStr: String,
   },
   created() {
     axios

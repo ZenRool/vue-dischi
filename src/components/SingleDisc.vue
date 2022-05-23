@@ -1,5 +1,8 @@
 <template>
-  <section class="d-flex justify-content-center">
+  <section
+    class="d-flex justify-content-center"
+    v-if="this.SearchStr === 'All' || DiscObj.genre === this.SearchStr"
+  >
     <div
       class="disc text-center py-3 px-1 d-flex flex-column align-items-center"
     >
@@ -16,6 +19,7 @@ export default {
   props: {
     DiscObj: Object,
     index: Number,
+    SearchStr: String,
   },
 };
 </script>

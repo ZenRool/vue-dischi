@@ -4,8 +4,8 @@
       <div class="offset-1 col-1 h-75">
         <img src="../assets/img/logo.png" alt="logo" />
       </div>
-      <div class="offset-7 col-2">
-        <SearchGenre />
+      <div class="offset-lg-7 col-lg-2 offset-md-6 col-md-3 offset-5 col-4">
+        <SearchGenre @searchChange="searchChange($event)" />
       </div>
     </div>
   </header>
@@ -16,6 +16,12 @@ export default {
   name: "SpotiHeader",
   components: {
     SearchGenre,
+  },
+  methods: {
+    searchChange(event) {
+      this.$emit("searchChange", event);
+      // console.log(typeof event);
+    },
   },
 };
 </script>
